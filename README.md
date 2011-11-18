@@ -30,4 +30,4 @@ end
 
 ## Credits
 
-This gem  was adapted from [sunspot_mongoid](https://github.com/jugyo/sunspot_mongoid)
+This gem was adapted from [sunspot_mongoid](https://github.com/jugyo/sunspot_mongoid)
