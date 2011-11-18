@@ -30,7 +30,6 @@ module Sunspot
 
     module ClassMethods
       def find_in_batches(options = {}, &block)
-        puts "finding in batches: #{options.inspect}"
         batch_size = options.delete(:batch_size) || 1000
         start      = options.delete(:start) || 0
         options.delete(:include)
