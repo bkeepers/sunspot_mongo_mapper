@@ -20,11 +20,11 @@ module Sunspot
 
     class DataAccessor < Sunspot::Adapters::DataAccessor
       def load(id)
-        @class.find(id)
+        @class.first(:id => id)
       end
 
       def load_all(ids)
-        @class.find(id)
+        @class.all(:id.in => ids)
       end
     end
   end
