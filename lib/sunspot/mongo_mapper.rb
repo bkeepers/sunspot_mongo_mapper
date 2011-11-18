@@ -27,5 +27,25 @@ module Sunspot
         @clazz.all(:id.in => ids)
       end
     end
+
+    module ClassMethods
+      def find_in_batches(options = {}, &block)
+        puts "finding in batches: #{options.inspect}"
+        batch_size = options.delete(:batch_size) || 1000
+        start      = options.delete(:start) || 0
+        options.delete(:include)
+        records    = []
+
+        query(options).skip(start).order(:id.asc).each do |record|
+          records << record
+          if records.size == batch_size
+            yield records
+            records = []
+          end
+        end
+
+        yield records unless records.blank?
+      end
+    end
   end
 end

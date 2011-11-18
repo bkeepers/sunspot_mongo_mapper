@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'mongo_mapper'
   s.add_runtime_dependency 'sunspot',       '~> 1.1'
   s.add_runtime_dependency 'sunspot_rails', '~> 1.1'
+  s.add_runtime_dependency 'rails',         '~> 3.0'
   s.add_development_dependency 'rspec',     '~> 2.0'
   s.add_development_dependency 'rake'
 end
