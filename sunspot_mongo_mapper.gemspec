@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = 'sunspot_mongo_mapper'
-  s.version     = '0.1.0'
+  s.version     = '0.1.1'
   s.authors     = ['Brandon Keepers']
   s.email       = ['brandon@opensoul.org']
   s.homepage    = "https://github.com/bkeepers/sunspot_mongo_mapper"
